@@ -5,17 +5,13 @@ a = input("Please enter your first number:")
 a = float(a)
 b = input("Please enter your second number:")
 b = float(b)
-if a >= 0:
-  if b >= 0:
-    if a % 2 == 0:
-      print("The product of", a, "x", b, "will be an even number of", a*b, ".")
-    else:
-      if b % 2 == 0:
-        print("The product of", a, "x", b, "will be an even number of", a*b, ".")
-      else:
-        print("The product of", a, "x", b, "will be an odd number of", a*b, ".")
+if a >= 0 or b >= 0:
+  if a % 2 == 0:
+    print("The product of", a, "x", b, "will be an even number of", a*b, ".")
+  elif b % 2 == 0:
+    print("The product of", a, "x", b, "will be an even number of", a*b, ".")
   else:
-    print("Error, you can only use positive numbers.")
+    print("The product of", a, "x", b, "will be an odd number of", a*b, ".")
 else:
   print("Error, you can only use positive numbers.")
 print(" ")
