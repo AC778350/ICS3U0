@@ -2,9 +2,9 @@ import math # imports mathimatical functions into the program
 print("Welcome to the even and odd detector!") # introduces the user to the program
 print("This program determines if the product of two positive numbers will be even or odd!") # explains the purpose of the program to the user
 a = input("Please enter your first number:") # has the user input their first number
-a = float(a)
+a = float(a) # turns the input 'a' into a decimal number
 b = input("Please enter your second number:") # has the user input their second number
-b = float(b)
+b = float(b) # turns the input 'b' into a decimal number
 if a >= 0 or b >= 0: # compares the inputted numbers to make sure they are not equal to zero
   if a % 2 == 0: # if the remainder of the modulus is equal to zero, the number must be even
     print("The product of", a, "x", b, "will be an even number of", a*b, ".") # lets the user know their product is even as well as provides the product
@@ -13,11 +13,11 @@ if a >= 0 or b >= 0: # compares the inputted numbers to make sure they are not e
   else: # if the remainder of the modulus is not equal to zero, the number must be odd
     print("The product of", a, "x", b, "will be an odd number of", a*b, ".") # lets the user know their product is odd as well as provides the product
 else: # an error message for if the user inputs any numbers lower than zero
-  print("Error, you can only use positive whole numbers.") # lets the user know that they can only input positive numbers
+  print("Error, you can only use positive numbers.") # lets the user know that they can only input positive numbers
 print(" ") # creates a space between the previous and next program
 print("I will find the cube's inner diagonal for any side length!") # introduces and explains the purpose of the program to the user
 m = input("Please enter the side length of your cube:") # has the user input the side length of the cube 
-m = float(m)
+m = float(m) # turns the input 'm' into a decimal number
 if m == 0: # compares the input to zero, as a side length cannot be zero or less
   print("Error, the side length must be greater than 0.") # lets the user know they have inputted an invalid number
 else: # provides an error message if the input is <= 0
@@ -25,7 +25,7 @@ else: # provides an error message if the input is <= 0
 print(" ") # creates a space between the previous and next program
 print("Welcome to the change calculator!") # introduces the user to the program
 c = input("Please input your amount of change in cents:") # prompts the user to input their amount of change 
-c = float(c) 
+c = int(c) # turns the input 'c' into an integer
 q = 0 # sets the variable to 0 in case no change is needed for this coin amount
 d = 0 # sets the variable to 0 in case no change is needed for this coin amount
 n = 0 # sets the variable to 0 in case no change is needed for this coin amount
