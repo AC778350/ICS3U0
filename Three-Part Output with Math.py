@@ -5,7 +5,7 @@ a = input("Please enter your first number:") # has the user input their first nu
 a = float(a) # turns the input 'a' into a decimal number
 b = input("Please enter your second number:") # has the user input their second number
 b = float(b) # turns the input 'b' into a decimal number
-if a >= 0 and a == int or b >= 0 and b == int: # compares the inputted numbers to make sure they are not less than zero or a decimal number
+if a >= 0 and b >= 0: # compares the inputted numbers to make sure they are not less than zero or a decimal number
   if a % 2 == 0: # if the remainder of the modulus is equal to zero, the number must be even
     print("The product of", a, "x", b, "will be an even number of", a*b, ".") # lets the user know their product is even as well as provides the product
   elif b % 2 == 0: # if the remainder of the modulus is equal to zero, the number must be even
