@@ -2,9 +2,9 @@ import math # imports mathimatical functions into the program
 print("Welcome to the even and odd detector!") # introduces the user to the program
 print("This program determines if the product of two positive whole numbers will be even or odd!") # explains the purpose of the program to the user
 a = input("Please enter your first number:") # has the user input their first number
-a = float(a) # turns the input 'a' into a decimal number
+a = int(a) # turns the input 'a' into an integer
 b = input("Please enter your second number:") # has the user input their second number
-b = float(b) # turns the input 'b' into a decimal number
+b = int(b) # turns the input 'b' into an integer
 if a >= 0 and b >= 0: # compares the inputted numbers to make sure they are not less than zero or a decimal number
   if a % 2 == 0: # if the remainder of the modulus is equal to zero, the number must be even
     print("The product of", a, "x", b, "will be an even number of", a*b, ".") # lets the user know their product is even as well as provides the product
@@ -25,7 +25,7 @@ else: # provides an error message if the input is <= 0
 print(" ") # creates a space between the previous and next program
 print("Welcome to the change calculator!") # introduces the user to the program
 c = input("Please input your amount of change in cents:") # prompts the user to input their amount of change 
-c = float(c) # turns the input 'c' into a decimal
+c = int(c) # turns the input 'c' into an integer
 q = 0 # sets the variable to 0 in case no change is needed for this coin amount
 d = 0 # sets the variable to 0 in case no change is needed for this coin amount
 n = 0 # sets the variable to 0 in case no change is needed for this coin amount
