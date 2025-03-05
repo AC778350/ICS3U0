@@ -26,3 +26,9 @@ while not correct:
         print("Sorry, you are out of guesses! The answer was:", num)
         print("Better luck next time!")
         correct = True
+
+  # Variable Dictionary:
+  # num: the number the user is trying to guess
+  # correct: checks to see if the user's guess is the same as the number
+  # guessnumber: records the number of guesses the user has made
+  # guess: records the user's guess
