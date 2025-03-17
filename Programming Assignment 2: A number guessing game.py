@@ -14,9 +14,6 @@ import random
 num = random.randrange(1,100,1)
 # sets the variable "num" to a random number in the range 1 - 100
 
-guess = -1
-# sets the guess outside of the range
-
 correct = False
 # sets the variable "correct" to false 
 
