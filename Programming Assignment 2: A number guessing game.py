@@ -2,7 +2,7 @@
 # 778350
 # ICS3U0
 
-# Variable Dictionary:
+# VARIABLE DICTIONARY:
 # num: the number the user is trying to guess
 # correct: checks to see if the user's guess is the same as the number
 # guessnumber: records the number of guesses the user has made
