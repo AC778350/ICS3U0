@@ -67,7 +67,7 @@ while not correct:
             # if the user's guess is higher than the number
             # let the user know to guess lower
     
-        if guessnumber == 7:
+        if guessnumber > 6:
         # the user can only have 6 guesses, so if the guess number
         # reaches 7 and the user did not guess correctly, the user has lost
         
