@@ -5,8 +5,8 @@
 # VARIABLE DICTIONARY:
 # 1: wordlist - the list of words the program will
 # determine whether or not it is a palindrome
-# 2: x -
-# 3: word - 
+# 2: x - a variable used to cycle through the list/words
+# 3: word - representative of each word in the list
 
 
 print("Palindrome Program!")
@@ -30,10 +30,10 @@ for x in range(len(wordlist)):
     # 
     
       print(word, "is a palindrome")
-      # lets the user know the word is a palindrom
+      # lets the user know the word is a palindrome
       
     else:
-    # 
+    # if the 
       print(word, "is not a palindrome")
       # lets the user know the word is not a palindrome
       
