@@ -43,18 +43,33 @@ def merge(y, m, d):
         if m == months[i]:
             m = i + 1
 
+    # converts m, d and y into strings, so they
+    # won't be added numerically when merged
     m = str(m)
     d = str(d)
     y = str(y)
 
+    ''' if d or m is a single digit, adds 0 in front 
+    to make it two digits. numbers with d or m with 
+    two digits will have more digits when merged,
+    which is why this step is necessary '''
     if len(d) == 1:
         d = "0" + d
     if len(m) == 1:
         m = "0" + m
 
+    # adds the strings to make a 6 digit number
     date = (y+m+d)
+    
+    # returns an integer to be able to compare numbers later
     return int(date)
 
+''' an empty array is created to contain the lines from the 
+file. a variable set to false allows the file to be read until
+there is nothing left to be read. While reading, each line is
+added to the array. a try and except is used to catch any
+potential errors with the file. When the file reaches the end,
+the variable is set to true and the file is closed'''
 database = []
 endOfFile = False
 try:
