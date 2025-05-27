@@ -128,7 +128,7 @@ if option == "d":
     if wordDate < 20210619:
         print("Too early! The earliest recorded date is Jun 19 2021.")
     elif wordDate > 20240421:
-        print("Too far! The latest recorded date is Apr 21 2024")
+        print("Too far! The latest recorded date is Apr 21 2024.")
     
     # cycles through the datesDatabase array to find the
     # matching date. Prints a statement to tell the user the
