@@ -86,8 +86,16 @@ except EOFError as err2:
     print("EOFError: ", err2)
     file.close()
 
+# an empty array to hold only the dates from the file
 datesDatabase = []
+
+# an empty array to hold only the words from the file
 wordsDatabase = []
+
+''' this for loop cycles through the array database and separates the month,
+day, year and word. The month, day and year are merged using the merge function.
+the dates and words are then appended to the datesDatabase and wordsDatabase 
+arrays until the database array is finished '''
 for i in range(len(database)):
     parts = database[i].split(" ")
     months = parts[0]
@@ -98,26 +106,51 @@ for i in range(len(database)):
     datesDatabase.append(dates)
     wordsDatabase.append(words)
 
+# introduces the user to the program
 print("Welcome to the Wordle Database!")
+
+# prompts the user to input w to find the date of a word
+# or d to find the word for a date
 option = input("Enter w if you are looking for a word, or d for a word on a certain date:")
+
+# if the user entered d, the program will ask them to input
+# the year, month and day they are looking for. It will then
+# merge the three using the merge function
 if option == "d":
     year = input("Enter the year: ")
     month = input("Enter the month (3-letter abbreviation, as in 'Jan' for 'January'): ")
     day = input("Enter the day: ")
     wordDate = merge(year, month, day)
+    
+    # if the merged number is less than 20210619 or larger
+    # than 20240421, the program will let the user know
+    # that the date they added is too early/far ahead
     if wordDate < 20210619:
-        print("Too early! The earliest date is Jun 19 2021.")
+        print("Too early! The earliest recorded date is Jun 19 2021.")
     elif wordDate > 20240421:
-        print("Too late! The latest date is Apr 21 2024")
+        print("Too far! The latest recorded date is Apr 21 2024")
+    
+    # cycles through the datesDatabase array to find the
+    # matching date. Prints a statement to tell the user the
+    # word from the wordsDatabase array at the same index
     for x in range(len(datesDatabase)):
         if wordDate == datesDatabase[x]:
            print("The word on", wordDate, "was", wordsDatabase[x])
+
+# if the user entered w, prompts them to enter the word they are looking for
 elif option == "w":
     word = input("What word are you looking for? (write in all CAPS): ")
+
+    ''' sets the variable equal to false until the inputted word
+    and a word in the database is the same. If equal is True,
+    prints a statement letting the user know the date of the
+    word from the datesDatabase array using the same index number'''
     equal = False
     for x in range(len(wordsDatabase)):
         if word == wordsDatabase[x]:
             equal = True
             print("The word", word, "was the answer on", datesDatabase[x])
+    
+    # if equal is never set to True, the word does not exist in the database
     if not equal:
         print("Error, word is not in the database.")
